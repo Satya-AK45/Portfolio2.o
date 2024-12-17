@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased font-sans;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hide-me {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.show-me {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bg-blur{
+  z-index: 1000;
+  position: fixed;
+  background: rgba(129, 46, 148, 0.178);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.h-20 {
+  height: 4rem;
+}
+
+.background-main {
+  margin: -0.1rem 0 0 0;
+  padding: 0;
+  background: linear-gradient(90deg, #feac5e, #c779d0, #4bc0c8);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: fit-content;
+}
+
+.img-fluid {
+
+  width: 300px;
+  margin-top: 8rem !important;
+  border-radius: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-width: 3px;
+  box-shadow: -50px -20px 40px rgba(227, 135, 255, 0.25), 0px 50px 40px rgba(255, 219, 57, 0.3), 50px -20px 40px rgba(118, 255, 255, 0.3), 0 0 2pt 4pt rgba(255, 255, 255, 0.6);
+}
+.colcen{
+  flex: 1 0 0%;
+
+}
+.quote {
+  background-color: #03001e;
+    transition: all 200ms ease-in-out;
+}
+@media (min-width: 768px) {
+  #fullsc{
+      font-size: 3.25rem;
+      line-height: 3.4rem;
+  }
+}
